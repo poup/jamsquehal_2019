@@ -17,7 +17,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: C:\Users\lclavel\Documents\FMOD Studio\Jamsquehal2019\Jamsquehal2019.fspro
   SourceProjectPathUnformatted: C:\Users\lclavel\Documents\FMOD Studio\Jamsquehal2019\Jamsquehal2019.fspro
-  SourceBankPathUnformatted: C:\Users\lclavel\Documents\FMOD Studio\Jamsquehal2019\Build\Desktop
+  SourceBankPathUnformatted: BuildFmod\Desktop
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
