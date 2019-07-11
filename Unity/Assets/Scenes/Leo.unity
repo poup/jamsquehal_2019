@@ -173,7 +173,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -215,17 +215,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
-    - target: {fileID: -2134977700737627372, guid: 2f5bdc90974604f4a9624bc067199052,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2134977700737627372, guid: 2f5bdc90974604f4a9624bc067199052,
-        type: 3}
-      propertyPath: playerPrefab
-      value: 
-      objectReference: {fileID: 5408536289822618707, guid: 74c3214e6159e0b458e3e8524dffca8e,
-        type: 3}
     - target: {fileID: 1893857132618591593, guid: 2f5bdc90974604f4a9624bc067199052,
         type: 3}
       propertyPath: m_LocalPosition.x

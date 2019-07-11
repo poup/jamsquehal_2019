@@ -52,6 +52,7 @@ public class Tongue : MonoBehaviour
         for (int i = 0; i < param.sectionCount; ++i)
         {
             var section = Instantiate(m_sectionPrefab, m_sectionDummy);
+            section.index = i;
             section.SetParam(m_params);
             section.ConnectedTo(previousRB);
             previousRB = section.rigidBody;

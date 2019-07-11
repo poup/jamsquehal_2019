@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   outSpeed: 0.01
-  sectionCount: 80
+  sectionCount: 60
   repulseForce: 0
-  conectedAnchor: {x: 0, y: 0.16, z: 0}
+  conectedAnchor: {x: 0, y: 0.2, z: 0}
