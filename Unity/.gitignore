@@ -1,3 +1,15 @@
 Library/
 Logs/
 Temp/
+Build
+obj
+Logs
+*.suo
+*.csproj
+*.csproj.DotSettings
+*.booproj
+*.pidb
+*.unityproj
+*.sln
+*.userprefs
+*.sublime-*
