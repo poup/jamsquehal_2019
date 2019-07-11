@@ -7,16 +7,6 @@ public static class Inputs
    public static string Fire1(int playerId) => "Fire1_" + playerId;
    public static string Fire2(int playerId) => "Fire2_" + playerId;
    
-
-   public static float GetAxisHorizontal(int playerId)
-   {
-      return Input.GetAxis(Horizontal(playerId));
-   } 
-   
-   public static float GetAxisVertical(int playerId)
-   {
-      return Input.GetAxis(Vertical(playerId));
-   }
    
    public static bool GetFire1(int playerId)
    {
@@ -26,5 +16,13 @@ public static class Inputs
    public static bool GetFire1Up(int playerId)
    {
       return Input.GetButtonUp(Fire1(playerId));
+   }
+
+   public static Vector2 GetAxis(int playerId)
+   {
+      return new Vector2(
+         Input.GetAxis(Horizontal(playerId)),
+         Input.GetAxis(Vertical(playerId))
+         );
    }
 }
