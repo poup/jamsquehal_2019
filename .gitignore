@@ -28,5 +28,5 @@ __pycache__/
 *.user
 credentials.json
 .idea/
-AssetBundles/
-Assets/Plugins/Editor/JetBrains
+Unity/AssetBundles/
+Unity/Assets/Plugins/Editor/JetBrains
