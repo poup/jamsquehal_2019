@@ -21,6 +21,7 @@ public class Tongue : MonoBehaviour
     [SerializeField] private Transform m_minPoint;
     [SerializeField] private Transform m_maxPoint;
 
+    public int m_visibleCount;
 
     private bool m_running;
     private bool m_autoMoveOut;
