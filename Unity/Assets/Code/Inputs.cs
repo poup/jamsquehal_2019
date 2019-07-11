@@ -27,4 +27,12 @@ public static class Inputs
    {
       return Input.GetButtonUp(Fire1(playerId));
    }
+
+   public static Vector3 GetAxis(int playerId)
+   {
+      return new Vector3(
+         Input.GetAxis(Horizontal(playerId)),
+         Input.GetAxis(Vertical(playerId))
+         );
+   }
 }
