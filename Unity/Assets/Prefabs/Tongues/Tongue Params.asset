@@ -13,52 +13,13 @@ MonoBehaviour:
   m_Name: Tongue Params
   m_EditorClassIdentifier: 
   width: 0.52
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.0011672974
-      value: 1.0070801
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.7185561
-      value: 0.9153833
-      inSlope: -0.5937502
-      outSlope: -0.5937502
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.96183145
-      value: 0.58595383
-      inSlope: -4.8085093
-      outSlope: -4.8085093
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.45863256
-      outWeight: 0.66391027
-    - serializedVersion: 3
-      time: 0.998851
-      value: 0.007068634
-      inSlope: -31.397318
-      outSlope: -31.397318
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.1295095
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  speed: 30
-  minDistance: 0.01
-  maxDistance: 0.4
-  damper: 1
-  spring: 5
-  maxAngularVelocity: 0.2
-  boneMass: 1
+  speed: 100
+  kRope: 39.34
+  dRope: 2
+  aRope: 0.05
+  mRopeSection: 0.2
+  maxStretch: 1.1
+  minStretch: 0.9
+  sectionLength: 1.96
+  sectionCount: 7
+  gravity: {x: 0, y: -3, z: 0}

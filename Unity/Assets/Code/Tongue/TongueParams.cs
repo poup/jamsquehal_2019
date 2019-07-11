@@ -6,15 +6,9 @@ namespace Code
     public class TongueParams : ScriptableObject
     {
         public float width;
-        public AnimationCurve curve;
-        
-        public float speed;
-        
-        
-        [Header("springs")]
-        public float minDistance = 1;
-        public float maxDistance = 2;
-        public float damper = 0.2f;
-        public float spring = 50;
+        public float moveSpeed;
+        public float outSpeed;
+        public float sectionLength = 0.05f;
+        public float sectionCount = 50;
     }
 }
