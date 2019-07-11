@@ -99,7 +99,7 @@ HingeJoint:
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -145,7 +145,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.1, z: 0.5}
+  m_Size: {x: 0.6, y: 0.15, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3766463714151752161
 GameObject:
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4897125939370819727, guid: 2fa37bff47e479440878732e0cda7619,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

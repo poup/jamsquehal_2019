@@ -31,20 +31,14 @@ namespace Code
 
         private void Start()
         {
-            Player player1 = Instantiate<Player>(playerPrefab, transform);
+            Player player1 = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity, transform);
             player1.board = this;
-            Player player2 = Instantiate<Player>(playerPrefab, transform);
+            Player player2 = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity, transform);
             player2.board = this;
-            Player player3 = Instantiate<Player>(playerPrefab, transform);
+            Player player3 = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity, transform);
             player3.board = this;
-            Player player4 = Instantiate<Player>(playerPrefab, transform);
+            Player player4 = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity, transform);
             player4.board = this;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }

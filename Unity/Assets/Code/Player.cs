@@ -8,6 +8,7 @@ namespace Code
     {
         public Board board;
         public SpriteRenderer sr;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -21,9 +22,10 @@ namespace Code
             string name = "Accroche" + randomPlacement;
             print(name);
             Transform t = board.transform.Find(name).transform;
-            transform.position = t.position;
-            transform.rotation = t.rotation;
-            transform.localScale = new Vector3(transform.localScale.x * 0.1f, transform.localScale.y * 0.1f, 0);
+            transform.SetParent(t);
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
+            transform.localScale = Vector3.one;
             
             do
             {
