@@ -6,7 +6,11 @@ namespace Code
 {
     public class PowerUpManager : MonoBehaviour
     {
-        public const float duration = 4.0f;
+        [SerializeField] private Board m_board;
+        
+        public float duration = 4.0f;
+        
+        public int MultiPommeCount = 20;
         
         public static PowerUpManager instance;
 
@@ -87,11 +91,8 @@ namespace Code
 
         private void DoMultiPomme(int playerId)
         {
-            // get board
-            // ajouter des pommes
+            m_board.appleSpawner.StartSpawn(MultiPommeCount);
         }
-        
-        
         
         private void DoSpeedup(int playerId)
         {
@@ -139,7 +140,11 @@ namespace Code
 
         private IEnumerable<TongueEnd> GetPlayersMover()
         {
-            yield break;
+            // Pwaaaah: faire autrement
+            yield return m_board.player1.GetComponentInChildren<TongueEnd>();
+            yield return m_board.player2.GetComponentInChildren<TongueEnd>();
+            yield return m_board.player3.GetComponentInChildren<TongueEnd>();
+            yield return m_board.player4.GetComponentInChildren<TongueEnd>();
         }
         
 
