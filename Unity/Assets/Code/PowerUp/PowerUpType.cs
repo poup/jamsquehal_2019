@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 
 namespace Code
 {
@@ -10,7 +11,8 @@ namespace Code
         Ice,
         Repulsive,
         InvertControl,
-        BoardRotation
+        BoardRotation,
+        SpeedUp
     }
 
     public static class PowerUpUtils
@@ -26,10 +28,14 @@ namespace Code
                 case PowerUpType.Repulsive: return -5;
                 case PowerUpType.InvertControl: return 5;
                 case PowerUpType.BoardRotation: return 5;
+                case PowerUpType.SpeedUp: return 5;
 
                 default:
                     return 1;
             }
         }
+
+        
+
     }
 }

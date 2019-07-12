@@ -15,6 +15,8 @@ public class Hole : MonoBehaviour
                 var powerUpType = apple.powerUpType;
                 var score = PowerUpUtils.GetScoreFor(powerUpType);
                 UI.instance.gamePage.AddScore(playerId, score);
+
+                PowerUpManager.instance.Activate(powerUpType, playerId);
             }
 
             Destroy(other.gameObject);
