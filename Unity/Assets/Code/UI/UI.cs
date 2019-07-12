@@ -19,32 +19,34 @@ public class UI : MonoBehaviour
     public VictoryPage victoryPage2;
     public VictoryPage victoryPage3;
     public VictoryPage victoryPage4;
+    public Canvas canvas;
+
+    public FlyingText flyingTextPrefab;
 
     public static UI instance;
-    
+
     public Board board;
 
     private void Awake()
     {
         instance = this;
-        
+
         startPage.gameObject.SetActive(true);
         gamePage.gameObject.SetActive(false);
         victoryPage1.gameObject.SetActive(false);
         victoryPage2.gameObject.SetActive(false);
         victoryPage3.gameObject.SetActive(false);
         victoryPage4.gameObject.SetActive(false);
-       
+
         startPage.playButton.onClick.AddListener(() =>
         {
             StartGame();
             startPage.gameObject.SetActive(false);
-            
         });
 
 
         gamePage.EndOfTimer = OnEndOfTimer;
-        
+
         victoryPage1.button.onClick.AddListener(Replay);
         victoryPage2.button.onClick.AddListener(Replay);
         victoryPage3.button.onClick.AddListener(Replay);
@@ -61,33 +63,32 @@ public class UI : MonoBehaviour
 //        
 //        StartGame();
 //// end TODO
-        
     }
 
     private void Replay()
     {
         gamePage.Reset();
-        
+
         victoryPage1.gameObject.SetActive(false);
         victoryPage2.gameObject.SetActive(false);
         victoryPage3.gameObject.SetActive(false);
         victoryPage4.gameObject.SetActive(false);
-        
+
         StartGame();
     }
 
     private void StartGame()
     {
         gamePage.gameObject.SetActive(true);
-        
+
         board.Clear();
-        
+
         StartCoroutine(StartGameCoroutine());
     }
 
     private IEnumerator StartGameCoroutine()
     {
-        yield return new WaitForSecondsRealtime(board.timeBeforePomme); 
+        yield return new WaitForSecondsRealtime(board.timeBeforePomme);
         board.appleSpawner.StartSpawn(board.StartPommeCount);
         yield return new WaitForSecondsRealtime(0.5f);
         gamePage.StartTimer(durationSeconds);
@@ -98,7 +99,7 @@ public class UI : MonoBehaviour
     private void OnEndOfTimer()
     {
         Sound.GameStop();
-        
+
         var winner = gamePage.GetWinner();
         if (winner != null)
         {
@@ -123,5 +124,18 @@ public class UI : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void PlayFlyingText(Vector3 worldPos, string text, Color color)
+    {
+        var f = Instantiate(flyingTextPrefab, transform);
+        
+        var viewportPoint = Camera.main.WorldToViewportPoint(worldPos);  
+
+        var rectTransform = (RectTransform)f.transform;
+        rectTransform.anchorMin = viewportPoint;  
+        rectTransform.anchorMax = viewportPoint; 
+        
+        f.Play(text, color);
     }
 }
