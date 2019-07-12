@@ -35,4 +35,6 @@ public static class Inputs
          Input.GetAxis(Vertical(playerId))
          );
    }
+
+   public static string Submit => "Submit";
 }

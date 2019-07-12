@@ -1,63 +1,62 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Code.UI;
 using TMPro;
 using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    public PlayerUI player1;
-    public PlayerUI player2;
-    public PlayerUI player3;
-    public PlayerUI player4;
+    public float durationSeconds = 60;
     
-    
-    public TextMeshProUGUI m_timer;
+    public StartPage startPage;
+    public GamePage gamePage;
+    public VictoryPage victoryPage;
 
     public static UI instance;
-
-    public Action EndOfTimer;
 
     private void Awake()
     {
         instance = this;
+        
+//        startPage.gameObject.SetActive(true);
+//        gamePage.gameObject.SetActive(false);
+//        victoryPage.gameObject.SetActive(false);
+//        
+//        startPage.playButton.onClick.AddListener(() =>
+//        {
+//            gamePage.gameObject.SetActive(true);
+//            gamePage.StartTimer(durationSeconds);
+//            
+//            startPage.gameObject.SetActive(false);
+//            
+//            
+//            // TODO charger la scene du board
+//            
+//        });
+//
+
+// TODO : remove ME
+        startPage.gameObject.SetActive(false);
+        gamePage.gameObject.SetActive(true);
+        victoryPage.gameObject.SetActive(false);
+            gamePage.StartTimer(durationSeconds);
+
+        gamePage.EndOfTimer = OnEndOfTimer;
     }
 
-    public void StartTimer(float duration)
+    private void OnEndOfTimer()
     {
-        StartCoroutine(Timer(duration));
-    }
-
-    private IEnumerator Timer(float duration)
-    {
-
-        while (duration > 0)
+        var winner = gamePage.GetWinner();
+        if (winner != null)
         {
-            m_timer.text = new TimeSpan(0, 0, (int)duration).ToString("mm:ss");
-            yield return new WaitForSeconds(1.0f);
-            duration -= 1.0f;
+            victoryPage.SetWinner(winner.scoreValue, winner.m_score.color, null);
         }
-
-        EndOfTimer?.Invoke();
-    }
-
-    public void SetScore(int playerId, int score)
-    {
-        var ui = GetPlayer(playerId);
-        if(ui != null)
-            ui.SetScore(score);
-    }
-
-    private PlayerUI GetPlayer(int playerId)
-    {
-        switch (playerId)
-        {
-            case 1: return player1;
-            case 2: return player2;
-            case 3: return player3;
-            case 4: return player4;
-        }
-
-        return null;
+        
+        victoryPage.gameObject.SetActive(true);
+        gamePage.gameObject.SetActive(false);
+        gamePage.Reset();
+        
+        // TODO décharger la scene du board
     }
 }
