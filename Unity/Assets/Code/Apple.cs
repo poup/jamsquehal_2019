@@ -24,14 +24,18 @@ public class Apple : MonoBehaviour
 
     private void LateUpdate()
     {
-        var rotationBefore = sr.transform.rotation.eulerAngles.z;
-        sr.transform.LookAt(Camera.main.transform.position);
-        var rotationAfter = transform.rotation.eulerAngles.z;
-        sr.transform.Rotate(new Vector3(0, 0, 1), rotationAfter);
-        if (Mathf.Abs(rotationBefore - rotationAfter) > 0.01)
-        {
-            print("rotation before : " + rotationBefore);
-            print("rotation after : " + rotationAfter);
-        }
+        var rotation = transform.rotation;
+        rotation.x = 0;
+        rotation.y = 0;
+        transform.rotation = rotation;
+//        var rotationBefore = sr.transform.rotation.eulerAngles.z;
+//        sr.transform.LookAt(Camera.main.transform.position);
+//        var rotationAfter = transform.rotation.eulerAngles.z;
+//        sr.transform.Rotate(new Vector3(0, 0, 1), rotationAfter);
+//        if (Mathf.Abs(rotationBefore - rotationAfter) > 0.01)
+//        {
+//            print("rotation before : " + rotationBefore);
+//            print("rotation after : " + rotationAfter);
+//        }
     }
 }
