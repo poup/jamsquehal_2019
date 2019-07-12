@@ -12,7 +12,8 @@ namespace Code
         Repulsive,
         InvertControl,
         BoardRotation,
-        SpeedUp
+        SpeedUp,
+        StraightTongue,
     }
 
     public static class PowerUpUtils
@@ -29,6 +30,7 @@ namespace Code
                 case PowerUpType.InvertControl: return 5;
                 case PowerUpType.BoardRotation: return 5;
                 case PowerUpType.SpeedUp: return 5;
+                case PowerUpType.StraightTongue: return 5;
 
                 default:
                     return 1;

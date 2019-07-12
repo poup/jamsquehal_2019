@@ -51,8 +51,17 @@ namespace Code
                 
                 case PowerUpType.SpeedUp: 
                     DoSpeedup(playerId);
+                    return; 
+                
+                case PowerUpType.StraightTongue: 
+                    DoStraightTongue(playerId);
                     return;
             }
+        }
+
+        private void DoStraightTongue(int playerId)
+        {
+            // TODO
         }
 
         private void DoBoardRotation(int playerId)
