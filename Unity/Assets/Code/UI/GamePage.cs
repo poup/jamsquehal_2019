@@ -85,7 +85,7 @@ namespace Code.UI
                 winner = player4;
             }
 
-            return null;
+            return winner;
         }
 
         public void Reset()

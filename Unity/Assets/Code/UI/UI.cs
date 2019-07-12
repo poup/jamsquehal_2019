@@ -22,26 +22,34 @@ public class UI : MonoBehaviour
     {
         instance = this;
         
-//        startPage.gameObject.SetActive(true);
+        startPage.gameObject.SetActive(true);
 //        gamePage.gameObject.SetActive(false);
 //        victoryPage1.gameObject.SetActive(false);
 //        victoryPage2.gameObject.SetActive(false);
 //        victoryPage3.gameObject.SetActive(false);
 //        victoryPage4.gameObject.SetActive(false);
 //        
-//        startPage.playButton.onClick.AddListener(() =>
-//        {
-//            gamePage.gameObject.SetActive(true);
-//            gamePage.StartTimer(durationSeconds);
-//            
-//            startPage.gameObject.SetActive(false);
-//            
-//            
-//            // TODO charger la scene du board
-//            
-//        });
+        startPage.playButton.onClick.AddListener(() =>
+        {
+            gamePage.gameObject.SetActive(true);
+            gamePage.StartTimer(durationSeconds);
+            
+            startPage.gameObject.SetActive(false);
+            
+            
+            // TODO charger la scene du board
+            
+        });
 //
 
+        gamePage.EndOfTimer = OnEndOfTimer;
+        
+        victoryPage1.button.onClick.AddListener(Replay);
+        victoryPage2.button.onClick.AddListener(Replay);
+        victoryPage3.button.onClick.AddListener(Replay);
+        victoryPage4.button.onClick.AddListener(Replay);
+
+        
 // TODO : remove ME
         startPage.gameObject.SetActive(false);
         gamePage.gameObject.SetActive(true);
@@ -51,9 +59,26 @@ public class UI : MonoBehaviour
         victoryPage3.gameObject.SetActive(false);
         victoryPage4.gameObject.SetActive(false);
         
-            gamePage.StartTimer(durationSeconds);
+        gamePage.StartTimer(durationSeconds);
+// end TODO
+        
+    }
 
-        gamePage.EndOfTimer = OnEndOfTimer;
+    private void Replay()
+    {
+        gamePage.gameObject.SetActive(false);
+        gamePage.Reset();
+        
+        victoryPage1.gameObject.SetActive(false);
+        victoryPage2.gameObject.SetActive(false);
+        victoryPage3.gameObject.SetActive(false);
+        victoryPage4.gameObject.SetActive(false);
+        
+        gamePage.StartTimer(durationSeconds);
+        
+        // TODO décharger la scene du board
+        
+        // TODO charger la scene du board
     }
 
     private void OnEndOfTimer()
@@ -62,18 +87,13 @@ public class UI : MonoBehaviour
         if (winner != null)
         {
             var victoryPage = GetVictoryPage(winner.playerId);
-            victoryPage.SetWinner(winner.scoreValue, winner.m_score.color, null);
+            victoryPage.SetWinnerScore(winner.scoreValue);
             victoryPage.gameObject.SetActive(true);
         }
         else
         {
             startPage.gameObject.SetActive(true);
         }
-        
-        gamePage.gameObject.SetActive(false);
-        gamePage.Reset();
-        
-        // TODO décharger la scene du board
     }
 
     private VictoryPage GetVictoryPage(int playerId)

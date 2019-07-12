@@ -11,10 +11,17 @@ namespace Code.UI
         public TextMeshProUGUI textMeshPro;
 
 
-        public void SetWinner(int score, Color textColor, string anim)
+        public void SetWinnerScore(int score)
         {
             textMeshPro.text = $"{score}";
-            textMeshPro.color = textColor;
+        }
+
+        public void Update()
+        {
+            if (Input.GetButtonDown(Inputs.Submit))
+            {
+                button.onClick.Invoke();
+            }
         }
     }
 }
