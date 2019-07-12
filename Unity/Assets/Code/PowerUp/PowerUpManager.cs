@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
 
 namespace Code
 {
@@ -81,7 +79,7 @@ namespace Code
         private void DoBoardRotation(int playerId)
         {
             // get board
-            var nbOfRotations = UnityEngine.Random.Range(5, 9);
+            var nbOfRotations = Random.Range(5, 9);
             StartCoroutine(RotateBoard(nbOfRotations * 45 * Mathf.Deg2Rad, interval));
             // rotation de Random(5, 8) de quart de tour
         }
@@ -110,7 +108,7 @@ namespace Code
 
         private void DoMultiPomme(int playerId)
         {
-            var count = UnityEngine.Random.Range(MultiPommeCountMin, MultiPommeCountMax);
+            var count = Random.Range(MultiPommeCountMin, MultiPommeCountMax);
             m_board.appleSpawner.StartSpawn(count, MultiPommeInterval);
         }
         
@@ -179,9 +177,9 @@ namespace Code
             
             for (int i = m_powerUps.Count - 1; i >= 0; --i)
             {
-                if (time - m_powerUps[i].startTime > duration)
+                if (time + duration  > m_powerUps[i].startTime)
                 {
-                    m_powerUps[i].terminated = false;
+                    m_powerUps[i].terminated = true;
                     m_powerUps.RemoveAt(i);
                 }
             }

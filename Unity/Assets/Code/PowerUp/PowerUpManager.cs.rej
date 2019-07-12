@@ -1,6 +1,0 @@
-diff a/Unity/Assets/Code/PowerUp/PowerUpManager.cs b/Unity/Assets/Code/PowerUp/PowerUpManager.cs	(rejected hunks)
-@@ -1,3 +2,4 @@
-++<<<<<<< HEAD
- +=======
-  using System;
-  using System.Collections;

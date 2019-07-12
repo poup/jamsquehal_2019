@@ -4,56 +4,53 @@ using Random = UnityEngine.Random;
 
 public class AppleSpawner : MonoBehaviour
 {
-   public float radius = 3.0f;
-   public float defaultInterval = 0.02f;
+    public float radius = 3.0f;
+    public float defaultInterval = 0.02f;
 
-   public float probaPowerUp = 1.0f / 20.0f;
-   public float scale = 5.0f;
+    public float probaPowerUp = 1.0f / 20.0f;
+    public float scale = 5.0f;
 
-   public Apple m_appleNormalPrefab;
-   public Apple[] m_powerUpsPrefab;
+    public Apple m_appleNormalPrefab;
+    public Apple[] m_powerUpsPrefab;
 
-   public void Clear()
-   {
-      for(int i = transform.childCount-1; i >= 0; --i)
-      {
-         Destroy(transform.GetChild(i).gameObject);
-      }
-   }
+    public void Clear()
+    {
+        for (int i = transform.childCount - 1; i >= 0; --i)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+    }
 
-   public void StartSpawn(int count)
-   {
-      StartSpawn(count, defaultInterval);
-   } 
-   
-   public void StartSpawn(int count, float interval)
-   {
-      StartCoroutine(Spawn(count, interval));
-   }
+    public void StartSpawn(int count)
+    {
+        StartSpawn(count, defaultInterval);
+    }
 
-   private IEnumerator Spawn(int count, float interval)
-   {
-      var s = new Vector3(scale, scale, scale);
+    public void StartSpawn(int count, float interval)
+    {
+        StartCoroutine(Spawn(count, interval));
+    }
 
-      for (int i = 0; i < count; ++i)
-     {
-         Vector3 pos = Random.insideUnitSphere * radius;
-         var prefab = GetRandomPrefab();
-         var apple = Instantiate(prefab, pos, Random.rotationUniform, transform);
-         apple.transform.localScale = s;
-         yield return new WaitForSecondsRealtime(interval);
-      }
-   }
+    private IEnumerator Spawn(int count, float interval)
+    {
+        for (int i = 0; i < count; ++i)
+        {
+            Vector3 pos = Random.insideUnitSphere * radius;
+            var prefab = GetRandomPrefab();
+            var apple = Instantiate(prefab, pos, Random.rotationUniform, transform);
+            apple.transform.localScale = scale * prefab.transform.localScale;
+            yield return new WaitForSecondsRealtime(interval);
+        }
+    }
 
-   public void StartRegularSpawn (int count, float interval, float totalTime)
-   {
+    public void StartRegularSpawn(int count, float interval, float totalTime)
+    {
         StartCoroutine(RegularSpawn(count, interval, totalTime));
-   }
+    }
 
     private IEnumerator RegularSpawn(int count, float interval, float totalTime)
     {
         var s = new Vector3(scale, scale, scale);
-        var timeLeft = totalTime;
         while (totalTime > 0)
         {
             for (int i = 0; i < count; ++i)
@@ -64,27 +61,25 @@ public class AppleSpawner : MonoBehaviour
                 apple.transform.localScale = s;
                 yield return new WaitForSecondsRealtime(0.2f);
             }
+
             totalTime -= interval;
             yield return new WaitForSecondsRealtime(interval);
         }
-
     }
 
     private Apple GetRandomPrefab()
-   {
-      float r = Random.value;
-      if (r > probaPowerUp || m_powerUpsPrefab == null)
-         return m_appleNormalPrefab;
+    {
+        float r = Random.value;
+        if (r > probaPowerUp || m_powerUpsPrefab == null)
+            return m_appleNormalPrefab;
+
+        var index = Random.Range(0, m_powerUpsPrefab.Length);
+        return m_powerUpsPrefab[index];
+    }
 
 
-      var index = (int)(Random.value * m_powerUpsPrefab.Length);
-      return m_powerUpsPrefab[index];
-   }
-
-
-   private void OnDrawGizmosSelected()
-   {
-      Gizmos.DrawWireSphere(transform.position, radius);
-   }
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
 }

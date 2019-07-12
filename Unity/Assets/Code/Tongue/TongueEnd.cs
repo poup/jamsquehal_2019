@@ -97,11 +97,6 @@ public class TongueEnd : MonoBehaviour
         modifier.Begin(this);
         m_modifiers.Add(modifier);
     }
-    public void RemoveModifier(ITongueEndModifier modifier)
-    {
-        modifier.End(this);
-        m_modifiers.Remove(modifier);
-    }
 
 
     public void SetPlayerId(int playerId)
@@ -132,13 +127,6 @@ public class TongueEnd : MonoBehaviour
         {
             force = modifier.ModifyInput(force);
         }
-
-//        if (direction.sqrMagnitude > 0.001f)
-//        {
-//            var angle = Mathf.Atan2(direction.y, direction.x);
-//            Quaternion rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
-//            transform.rotation = rotation;
-//        }
 
         rigidBody.AddForce(force, ForceMode.Impulse);
     }
