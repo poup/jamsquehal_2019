@@ -100,6 +100,26 @@ MonoBehaviour:
   - Name: 
     Value: 2828928
   Exists: 1
+--- !u!114 &-2455162167520637914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:\lgarreau\Documents\Jamsquehal\Unity\BuildFmod\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636984523009666164
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 730
+  Exists: 1
 --- !u!114 &-1777552172679711702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +136,7 @@ MonoBehaviour:
   guid: 0d82cc41d4f4d84a9f60a3c56771e754
   Banks:
   - {fileID: -403010548545421556}
-  - {fileID: -8826176330186060682}
+  - {fileID: -1337149556490161040}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -124,6 +144,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 216461
+--- !u!114 &-1337149556490161040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:\lgarreau\Documents\Jamsquehal\Unity\BuildFmod\Desktop\Master.bank
+  SubDir: 
+  lastModified: 636984523009656200
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2828928
+  Exists: 1
 --- !u!114 &-1233989213626664974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,16 +217,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 7235660919735846571}
-  - {fileID: -8826176330186060682}
+  - {fileID: -2455162167520637914}
+  - {fileID: -1337149556490161040}
   EditorEvents:
   - {fileID: -1777552172679711702}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8826176330186060682}
+  - {fileID: -1337149556490161040}
   StringsBanks:
-  - {fileID: 7235660919735846571}
-  stringsBankWriteTime: 636984522529175236
+  - {fileID: -2455162167520637914}
+  stringsBankWriteTime: 636984523009666164
   cacheVersion: 3
 --- !u!114 &2974122884452115878
 MonoBehaviour:
