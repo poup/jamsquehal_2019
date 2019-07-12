@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
@@ -9,6 +11,7 @@ namespace Code
         [SerializeField] private Board m_board;
         
         public float duration = 4.0f;
+        public float interval = 0.1f;
         
         [Header("MultiPomme")]
         public int MultiPommeCountMin = 18;
@@ -78,11 +81,20 @@ namespace Code
         private void DoBoardRotation(int playerId)
         {
             // get board
-            
+            var nbOfRotations = UnityEngine.Random.Range(5, 9);
+            StartCoroutine(RotateBoard(nbOfRotations * 45 * Mathf.Deg2Rad, interval));
             // rotation de Random(5, 8) de quart de tour
         }
 
-        
+        private IEnumerator RotateBoard (float totalAngle, float interval)
+        {
+            while (totalAngle > 0)
+            {
+                m_board.transform.Rotate(Vector3.forward, totalAngle * interval);
+                totalAngle -= interval;
+                yield return new WaitForSecondsRealtime(interval);
+            }
+        }
 
         private void DoRepulsive(int playerId)
         {

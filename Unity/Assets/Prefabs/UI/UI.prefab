@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5415124941454903095}
   - component: {fileID: 7743727066113871105}
+  - component: {fileID: 788562402}
   m_Layer: 5
   m_Name: GamePage
   m_TagString: Untagged
@@ -149,6 +150,29 @@ MonoBehaviour:
   player3: {fileID: 3561836004009234309}
   player4: {fileID: 4156255483256539242}
   m_timer: {fileID: 5400425769957264149}
+--- !u!114 &788562402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468595493883893995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Musiques/Gameplay_Music
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1305365889125981630
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +420,7 @@ GameObject:
   - component: {fileID: 6900965718437455746}
   - component: {fileID: 7953169301649655441}
   - component: {fileID: 3994968019949315180}
+  - component: {fileID: 1023443199}
   m_Layer: 5
   m_Name: VictoryPageRed
   m_TagString: Untagged
@@ -495,6 +520,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1023443199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996763908014365757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Gameplay_SFX/SFX_Victoire
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Perso
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2371137046534968599
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +876,7 @@ GameObject:
   - component: {fileID: 840937279544770687}
   - component: {fileID: 3962766806472585877}
   - component: {fileID: 586633995076728221}
+  - component: {fileID: 1974654468}
   m_Layer: 5
   m_Name: VictoryPageGreen
   m_TagString: Untagged
@@ -925,6 +976,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1974654468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3787431761961629660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Gameplay_SFX/SFX_Victoire
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Perso
+    Value: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &4146127078873277235
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378, y: 221}
+  m_AnchoredPosition: {x: 351, y: 203}
   m_SizeDelta: {x: 873, y: 383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1368685855039648479
@@ -1208,6 +1284,7 @@ GameObject:
   - component: {fileID: 6710147371206611813}
   - component: {fileID: 5407701650163112540}
   - component: {fileID: 7975026395690914439}
+  - component: {fileID: 2027108382}
   m_Layer: 5
   m_Name: VictoryPageYellow
   m_TagString: Untagged
@@ -1307,6 +1384,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2027108382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4812256284939946449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Gameplay_SFX/SFX_Victoire
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Perso
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &4866945753499280098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +1900,7 @@ GameObject:
   - component: {fileID: 5453781469468087275}
   - component: {fileID: 3650862119112199457}
   - component: {fileID: 3286142496271598445}
+  - component: {fileID: 1524768642}
   m_Layer: 5
   m_Name: VictoryPageBlue
   m_TagString: Untagged
@@ -1897,6 +2000,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1524768642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687449015474575377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Gameplay_SFX/SFX_Victoire
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Perso
+    Value: 3
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &6721651066263481583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 379, y: -156}
+  m_AnchoredPosition: {x: 350, y: -156}
   m_SizeDelta: {x: 498, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3790555076036117266
@@ -2984,6 +3112,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f64e9fd1fb17ffd4698aeae0fd74976e, type: 3}
+--- !u!224 &6227667809914208908 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3985593888152464796, guid: f64e9fd1fb17ffd4698aeae0fd74976e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6999352926193446672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4156255483256539242 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6381405172255385466, guid: f64e9fd1fb17ffd4698aeae0fd74976e,
@@ -2996,12 +3130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a727428481c4d6d45a448a6e9ec680cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &6227667809914208908 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3985593888152464796, guid: f64e9fd1fb17ffd4698aeae0fd74976e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6999352926193446672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7629485659261348095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3338,12 +3466,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f64e9fd1fb17ffd4698aeae0fd74976e, type: 3}
---- !u!224 &6394517807398351361 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3985593888152464796, guid: f64e9fd1fb17ffd4698aeae0fd74976e,
-    type: 3}
-  m_PrefabInstance: {fileID: 8066589694368472989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3998359358734317799 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6381405172255385466, guid: f64e9fd1fb17ffd4698aeae0fd74976e,
@@ -3356,3 +3478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a727428481c4d6d45a448a6e9ec680cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &6394517807398351361 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3985593888152464796, guid: f64e9fd1fb17ffd4698aeae0fd74976e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8066589694368472989}
+  m_PrefabAsset: {fileID: 0}
