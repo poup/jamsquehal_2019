@@ -36,14 +36,31 @@ MonoBehaviour:
   guid: c899c992a3d9a54bb0707954b90f4429
   Banks:
   - {fileID: -4790531923721945290}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 5537983128731353676}
+  - {fileID: -2338494109804444545}
   MinDistance: 0
   MaxDistance: 0
-  Length: 2343
+  Length: 18500
+--- !u!114 &-8085209898756551281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_Gobe/Perso
+  m_EditorClassIdentifier: 
+  Name: Perso
+  Min: 0
+  Max: 4
+  Default: 0
+  Exists: 1
 --- !u!114 &-7839217405522323345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +98,23 @@ MonoBehaviour:
   - Name: 
     Value: 730
   Exists: 1
+--- !u!114 &-5274450602900059583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_Bonus/Perso
+  m_EditorClassIdentifier: 
+  Name: Perso
+  Min: 0
+  Max: 4
+  Default: 0
+  Exists: 1
 --- !u!114 &-4790531923721945290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,11 +129,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\rlasserre\Documents\jamsquehal_2019\Unity\BuildFmod\Desktop\Master.bank
   SubDir: 
-  lastModified: 636985352420269453
+  lastModified: 636985396033258243
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 2315520
+    Value: 2885600
   Exists: 1
 --- !u!114 &-4577325756112735461
 MonoBehaviour:
@@ -144,7 +178,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -7839217405522323345}
+  - {fileID: -8085209898756551281}
   MinDistance: 0
   MaxDistance: 0
   Length: 2250
@@ -250,6 +284,23 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 730
+  Exists: 1
+--- !u!114 &-2338494109804444545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_Victoire/Perso
+  m_EditorClassIdentifier: 
+  Name: Perso
+  Min: 0
+  Max: 4
+  Default: 0
   Exists: 1
 --- !u!114 &-1777552172679711702
 MonoBehaviour:
@@ -400,13 +451,31 @@ MonoBehaviour:
   - {fileID: -8638723897586242934}
   - {fileID: 1088379929633096906}
   - {fileID: -3545053352123054255}
+  - {fileID: 4516613966657101166}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4790531923721945290}
   StringsBanks:
   - {fileID: 4326000065453674042}
-  stringsBankWriteTime: 636985352420289418
+  stringsBankWriteTime: 636985396033318203
   cacheVersion: 3
+--- !u!114 &1049548797245178241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_Malus/Perso
+  m_EditorClassIdentifier: 
+  Name: Perso
+  Min: 0
+  Max: 4
+  Default: 0
+  Exists: 1
 --- !u!114 &1088379929633096906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +496,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -1609090404955711611}
+  - {fileID: 1049548797245178241}
   MinDistance: 0
   MaxDistance: 0
   Length: 2343
@@ -474,10 +543,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7667790705231678127}
+  - {fileID: -5274450602900059583}
   MinDistance: 0
   MaxDistance: 0
-  Length: 2281
+  Length: 2562
 --- !u!114 &2974122884452115878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,11 +644,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\rlasserre\Documents\jamsquehal_2019\Unity\BuildFmod\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 636985352420289418
+  lastModified: 636985396033318203
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1238
+    Value: 1278
   Exists: 1
 --- !u!114 &4332095533662149012
 MonoBehaviour:
@@ -601,6 +670,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2828928
   Exists: 1
+--- !u!114 &4516613966657101166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gameplay_SFX/SFX_Pomme_Pop
+  m_EditorClassIdentifier: 
+  Path: event:/Gameplay_SFX/SFX_Pomme_Pop
+  guid: 0eb1d1359215ae4cb461efebbf19485a
+  Banks:
+  - {fileID: -4790531923721945290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 365
 --- !u!114 &5537983128731353676
 MonoBehaviour:
   m_ObjectHideFlags: 0
