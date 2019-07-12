@@ -66,7 +66,6 @@ public class UI : MonoBehaviour
 
     private void Replay()
     {
-        gamePage.gameObject.SetActive(false);
         gamePage.Reset();
         
         victoryPage1.gameObject.SetActive(false);
@@ -74,6 +73,7 @@ public class UI : MonoBehaviour
         victoryPage3.gameObject.SetActive(false);
         victoryPage4.gameObject.SetActive(false);
         
+        gamePage.gameObject.SetActive(true);
         gamePage.StartTimer(durationSeconds);
         
         // TODO décharger la scene du board
