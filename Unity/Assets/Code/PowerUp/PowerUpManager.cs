@@ -177,7 +177,7 @@ namespace Code
             
             for (int i = m_powerUps.Count - 1; i >= 0; --i)
             {
-                if (time + duration  > m_powerUps[i].startTime)
+                if (time - duration  > m_powerUps[i].startTime)
                 {
                     m_powerUps[i].terminated = true;
                     m_powerUps.RemoveAt(i);
