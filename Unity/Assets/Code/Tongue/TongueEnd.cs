@@ -7,21 +7,21 @@ public class TongueEnd : MonoBehaviour
     [SerializeField] private TongueParams m_params;
     [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private HingeJoint m_joint;
-    
-    
+
+
     public void SetPlayerId(int playerId)
     {
         m_playerId = playerId;
     }
-    
+
     private void FixedUpdate()
     {
         var playerId = m_playerId;
         var dt = Time.deltaTime;
-        
+
         var param = m_params;
         var speed = param.moveSpeed;
-        
+
 
         Vector3 direction = Inputs.GetAxis(playerId);
         var force = speed * direction;
@@ -35,7 +35,7 @@ public class TongueEnd : MonoBehaviour
 
         rigidBody.AddForce(force, ForceMode.Impulse);
     }
-    
+
     private void OnCollisionEnter(Collision other)
     {
 //        if (other.contactCount > 0)
@@ -48,5 +48,11 @@ public class TongueEnd : MonoBehaviour
     public void ConnectedTo(Rigidbody previousRb)
     {
         m_joint.connectedBody = previousRb;
+    }
+
+    public void Move(Vector3 delta)
+    {
+        rigidBody.AddForce(delta, ForceMode.Impulse);
+        ;
     }
 }

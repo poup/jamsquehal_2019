@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Tongue Params
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  outSpeed: 0.01
+  outSpeed: 12.03
+  inSpeed: 7.85
   sectionCount: 60
+  minCount: 1
   repulseForce: 0
   conectedAnchor: {x: 0, y: 0.2, z: 0}
+  coolDownIn: 1
