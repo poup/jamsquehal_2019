@@ -26,23 +26,19 @@ public class UI : MonoBehaviour
         instance = this;
         
         startPage.gameObject.SetActive(true);
-//        gamePage.gameObject.SetActive(false);
-//        victoryPage1.gameObject.SetActive(false);
-//        victoryPage2.gameObject.SetActive(false);
-//        victoryPage3.gameObject.SetActive(false);
-//        victoryPage4.gameObject.SetActive(false);
-//        
+        gamePage.gameObject.SetActive(false);
+        victoryPage1.gameObject.SetActive(false);
+        victoryPage2.gameObject.SetActive(false);
+        victoryPage3.gameObject.SetActive(false);
+        victoryPage4.gameObject.SetActive(false);
+       
         startPage.playButton.onClick.AddListener(() =>
         {
             StartGame();
-            
             startPage.gameObject.SetActive(false);
             
-            
-            // TODO charger la scene du board
-            
         });
-//
+
 
         gamePage.EndOfTimer = OnEndOfTimer;
         
@@ -51,17 +47,17 @@ public class UI : MonoBehaviour
         victoryPage3.button.onClick.AddListener(Replay);
         victoryPage4.button.onClick.AddListener(Replay);
 
-        
-// TODO : remove ME
-        startPage.gameObject.SetActive(false);
-        
-        victoryPage1.gameObject.SetActive(false);
-        victoryPage2.gameObject.SetActive(false);
-        victoryPage3.gameObject.SetActive(false);
-        victoryPage4.gameObject.SetActive(false);
-        
-        StartGame();
-// end TODO
+//        
+//// TODO : remove ME
+//        startPage.gameObject.SetActive(false);
+//        
+//        victoryPage1.gameObject.SetActive(false);
+//        victoryPage2.gameObject.SetActive(false);
+//        victoryPage3.gameObject.SetActive(false);
+//        victoryPage4.gameObject.SetActive(false);
+//        
+//        StartGame();
+//// end TODO
         
     }
 
@@ -75,10 +71,6 @@ public class UI : MonoBehaviour
         victoryPage4.gameObject.SetActive(false);
         
         StartGame();
-
-        // TODO décharger la scene du board
-        
-        // TODO charger la scene du board
     }
 
     private void StartGame()
