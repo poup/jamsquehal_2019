@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3ed0a782941644eb9b1f98a42bf096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerId: 1
 --- !u!1 &3012268171225216246
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3012268171225216244}
   - component: {fileID: 5408536289822618707}
+  - component: {fileID: 6200192718187086066}
   m_Layer: 0
   m_Name: player1
   m_TagString: Untagged
@@ -186,6 +188,22 @@ MonoBehaviour:
   board: {fileID: 0}
   srUp: {fileID: 6908157276887472585}
   srDown: {fileID: 5331266256897867544}
+--- !u!114 &6200192718187086066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012268171225216246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e87114e76d741a4c82af05cff122928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3.25
+  count: 15
+  colliderCenter: {x: 0, y: 0, z: 0}
+  colliderSize: {x: 1, y: 1, z: 1}
 --- !u!1 &7112458424857234080
 GameObject:
   m_ObjectHideFlags: 0

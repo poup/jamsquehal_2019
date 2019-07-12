@@ -9,10 +9,5 @@ namespace Code
         public Board board;
         public SpriteRenderer srUp;
         public SpriteRenderer srDown;
-        
-        // Start is called before the first frame update
-        void Start()
-        {
-        }
     }
 }
