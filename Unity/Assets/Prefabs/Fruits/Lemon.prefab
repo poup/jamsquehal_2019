@@ -148,6 +148,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: cb15027e27e086d43b29c2e7bd086cca,
         type: 3}
+    - target: {fileID: -5371599581569124685, guid: c61e14fbf1592a94fab626560ff936d1,
+        type: 3}
+      propertyPath: Event
+      value: event:/Gameplay_SFX/SFX_Malus
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5374783614503288816, guid: c61e14fbf1592a94fab626560ff936d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c61e14fbf1592a94fab626560ff936d1, type: 3}
