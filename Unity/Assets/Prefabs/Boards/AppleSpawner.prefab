@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  interval: 0.1
+  defaultInterval: 0.02
   probaPowerUp: 0.05
+  scale: 5
   m_appleNormalPrefab: {fileID: 1970731599, guid: c61e14fbf1592a94fab626560ff936d1,
     type: 3}
   m_powerUpsPrefab:
@@ -54,3 +55,6 @@ MonoBehaviour:
   - {fileID: 5230114646376611681, guid: ff6c4eff9ff825c469c7179765e7ce08, type: 3}
   - {fileID: 29649306406225082, guid: 2b4e047ae59b7f243a4569bb21910a03, type: 3}
   - {fileID: 8997243684539062685, guid: 5523c12fcbf8bd14cb69d7e98a242e1a, type: 3}
+  - {fileID: 7735214987359635286, guid: 9d3256b31669b59478336b17814a98ec, type: 3}
+  - {fileID: 5348433973513371010, guid: 9b44dbb1f3d7e554b8db1185acbc4d2c, type: 3}
+  - {fileID: 8210230991959840522, guid: ce968414fae470e46932d1fcdde2b0c3, type: 3}
