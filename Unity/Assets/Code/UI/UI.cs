@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Code;
 using Code.UI;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class UI : MonoBehaviour
     public VictoryPage victoryPage4;
 
     public static UI instance;
+    
+    public Board board;
 
     private void Awake()
     {
@@ -31,8 +34,7 @@ public class UI : MonoBehaviour
 //        
         startPage.playButton.onClick.AddListener(() =>
         {
-            gamePage.gameObject.SetActive(true);
-            gamePage.StartTimer(durationSeconds);
+            StartGame();
             
             startPage.gameObject.SetActive(false);
             
@@ -52,14 +54,13 @@ public class UI : MonoBehaviour
         
 // TODO : remove ME
         startPage.gameObject.SetActive(false);
-        gamePage.gameObject.SetActive(true);
         
         victoryPage1.gameObject.SetActive(false);
         victoryPage2.gameObject.SetActive(false);
         victoryPage3.gameObject.SetActive(false);
         victoryPage4.gameObject.SetActive(false);
         
-        gamePage.StartTimer(durationSeconds);
+        StartGame();
 // end TODO
         
     }
@@ -73,12 +74,20 @@ public class UI : MonoBehaviour
         victoryPage3.gameObject.SetActive(false);
         victoryPage4.gameObject.SetActive(false);
         
-        gamePage.gameObject.SetActive(true);
-        gamePage.StartTimer(durationSeconds);
-        
+        StartGame();
+
         // TODO décharger la scene du board
         
         // TODO charger la scene du board
+    }
+
+    private void StartGame()
+    {
+        gamePage.gameObject.SetActive(true);
+        gamePage.StartTimer(durationSeconds);
+        
+        board.appleSpawner.Clear();
+        board.appleSpawner.StartSpawn(board.StartPommeCount);
     }
 
     private void OnEndOfTimer()

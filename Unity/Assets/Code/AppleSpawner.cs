@@ -5,20 +5,32 @@ using Random = UnityEngine.Random;
 public class AppleSpawner : MonoBehaviour
 {
    public float radius = 3.0f;
-   public float interval = 0.02f;
+   public float defaultInterval = 0.02f;
 
    public float probaPowerUp = 1.0f / 20.0f;
 
    public Apple m_appleNormalPrefab;
    public Apple[] m_powerUpsPrefab;
 
+   public void Clear()
+   {
+      for(int i = transform.childCount-1; i >= 0; --i)
+      {
+         Destroy(transform.GetChild(i));
+      }
+   }
 
    public void StartSpawn(int count)
    {
-      StartCoroutine(Spawn(count));
+      StartSpawn(count, defaultInterval);
+   } 
+   
+   public void StartSpawn(int count, float interval)
+   {
+      StartCoroutine(Spawn(count, interval));
    }
 
-   private IEnumerator Spawn(int count)
+   private IEnumerator Spawn(int count, float interval)
    {
       Vector3 pos = Random.insideUnitSphere * radius;
 

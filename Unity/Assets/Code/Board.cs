@@ -23,6 +23,8 @@ namespace Code
         [HideInInspector] public Player player2;
         [HideInInspector] public Player player3;
         [HideInInspector] public Player player4;
+
+        public int StartPommeCount = 20;
         
         private void Start()
         {

@@ -12,6 +12,7 @@ namespace Code
         
         [Header("MultiPomme")]
         public int MultiPommeCount = 20;
+        public float MultiPommeInterval = 0.08f;
         
         [Header("SpeedUp")]
         public float speedUp = 2.0f;
@@ -96,7 +97,7 @@ namespace Code
 
         private void DoMultiPomme(int playerId)
         {
-            m_board.appleSpawner.StartSpawn(MultiPommeCount);
+            m_board.appleSpawner.StartSpawn(MultiPommeCount, MultiPommeInterval);
         }
         
         private void DoSpeedup(int playerId)
