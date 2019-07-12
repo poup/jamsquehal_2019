@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444901271518310227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.27}
+  m_LocalPosition: {x: 0, y: 0, z: -4.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  interval: 0.1
+  defaultInterval: 0.02
   probaPowerUp: 0.05
+  scale: 5
   m_appleNormalPrefab: {fileID: 1970731599, guid: c61e14fbf1592a94fab626560ff936d1,
     type: 3}
   m_powerUpsPrefab:
