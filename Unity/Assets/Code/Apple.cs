@@ -14,7 +14,7 @@ public class Apple : MonoBehaviour
     void Update()
     {
         // debug
-        if(Inputs.GetFire1(1))
+        if(Inputs.GetDebug() > 0.05)
         {
             rb.AddForce(new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), 0));
         }
@@ -28,14 +28,5 @@ public class Apple : MonoBehaviour
         rotation.x = 0;
         rotation.y = 0;
         transform.rotation = rotation;
-//        var rotationBefore = sr.transform.rotation.eulerAngles.z;
-//        sr.transform.LookAt(Camera.main.transform.position);
-//        var rotationAfter = transform.rotation.eulerAngles.z;
-//        sr.transform.Rotate(new Vector3(0, 0, 1), rotationAfter);
-//        if (Mathf.Abs(rotationBefore - rotationAfter) > 0.01)
-//        {
-//            print("rotation before : " + rotationBefore);
-//            print("rotation after : " + rotationAfter);
-//        }
     }
 }

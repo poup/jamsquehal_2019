@@ -58,7 +58,6 @@ namespace Code
         private void OnTriggerEnter(Collider other)
         {
             Destroy(other.gameObject);
-            Debug.LogError("Destroy " + other.gameObject.name);
         }
     }
 }
