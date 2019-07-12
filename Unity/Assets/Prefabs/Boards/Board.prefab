@@ -426,14 +426,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7706b563feefe049ac8ec611d20a7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accr1: {fileID: 0}
-  accr2: {fileID: 0}
-  accr3: {fileID: 0}
-  accr4: {fileID: 0}
-  player1Prefab: {fileID: 0}
-  player2Prefab: {fileID: 0}
-  player3Prefab: {fileID: 0}
-  player4Prefab: {fileID: 0}
+  accr1: {fileID: 7505275048608169382}
+  accr2: {fileID: 7106015350139324124}
+  accr3: {fileID: 645306535749578030}
+  accr4: {fileID: 1745156390996796403}
+  player1Prefab: {fileID: 5408536289822618707, guid: 74c3214e6159e0b458e3e8524dffca8e,
+    type: 3}
+  player2Prefab: {fileID: 5408536289822618707, guid: f1bf6218e9b8ff041b946aa014836fb5,
+    type: 3}
+  player3Prefab: {fileID: 5408536289822618707, guid: 89a953a03c7168b478b66131a5a24972,
+    type: 3}
+  player4Prefab: {fileID: 5408536289822618707, guid: b5529b7d8f0eac54ba0cb509d1ed9ca8,
+    type: 3}
 --- !u!65 &712232729693751727
 BoxCollider:
   m_ObjectHideFlags: 0
