@@ -27,6 +27,7 @@ public static class Sound
         gameplayMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Musiques/Gameplay_Music");
 
 
+
     }
 
     public static void LangueCollisionBegin()
@@ -36,7 +37,7 @@ public static class Sound
 
     public static void LangueCollisionStop()
     {
-        langueCollision.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        langueCollision.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public static void GameStart()
@@ -45,17 +46,25 @@ public static class Sound
         barkIdle.start();
     }
 
-    public static void GameEnd()
+    public static void VictoireScreen()
     {
-        barkIdle.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        gameplayMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        barkIdle.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        gameplayMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Victoire.start();
     }
 
+    public static void MenuScreen()
+    {
+        Victoire.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+    }
+    
     public static void Gobe(int perso)
     {
         gobe.setParameterByName("Perso", perso, true);
         gobe.start();
     }
+
 
 
 
