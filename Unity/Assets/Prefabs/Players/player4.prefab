@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5780964666476817616}
   - component: {fileID: 4542590502260184291}
+  - component: {fileID: 9162337475558226269}
   m_Layer: 0
   m_Name: Mouth
   m_TagString: Untagged
@@ -123,6 +124,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9162337475558226269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692748041893254977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3ed0a782941644eb9b1f98a42bf096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 4
 --- !u!1 &3012268171225216246
 GameObject:
   m_ObjectHideFlags: 0
