@@ -9,7 +9,10 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     public float durationSeconds = 60;
-    
+    public float startRegularSpawnAfterNSeconds = 5f;
+    public float regularInterval = 2f;
+    public int regularCount = 2;
+
     public StartPage startPage;
     public GamePage gamePage;
     public VictoryPage victoryPage1;
@@ -88,6 +91,8 @@ public class UI : MonoBehaviour
         board.appleSpawner.StartSpawn(board.StartPommeCount);
         yield return new WaitForSecondsRealtime(0.5f);
         gamePage.StartTimer(durationSeconds);
+        yield return new WaitForSecondsRealtime(startRegularSpawnAfterNSeconds);
+        board.appleSpawner.StartRegularSpawn(regularCount, regularInterval, durationSeconds - startRegularSpawnAfterNSeconds);
     }
 
     private void OnEndOfTimer()

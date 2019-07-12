@@ -45,7 +45,32 @@ public class AppleSpawner : MonoBehaviour
       }
    }
 
-   private Apple GetRandomPrefab()
+   public void StartRegularSpawn (int count, float interval, float totalTime)
+   {
+        StartCoroutine(RegularSpawn(count, interval, totalTime));
+   }
+
+    private IEnumerator RegularSpawn(int count, float interval, float totalTime)
+    {
+        var s = new Vector3(scale, scale, scale);
+        Vector3 pos = Random.insideUnitSphere * radius;
+        var timeLeft = totalTime;
+        while (totalTime > 0)
+        {
+            for (int i = 0; i < count; ++i)
+            {
+                var prefab = GetRandomPrefab();
+                var apple = Instantiate(prefab, pos, Random.rotationUniform, transform);
+                apple.transform.localScale = s;
+                yield return new WaitForSecondsRealtime(0.2f);
+            }
+            totalTime -= interval;
+            yield return new WaitForSecondsRealtime(interval);
+        }
+
+    }
+
+    private Apple GetRandomPrefab()
    {
       float r = Random.value;
       if (r > probaPowerUp || m_powerUpsPrefab == null)
