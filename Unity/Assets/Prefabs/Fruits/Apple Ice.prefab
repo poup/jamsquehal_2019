@@ -71,5 +71,11 @@ PrefabInstance:
       propertyPath: powerUpType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5374783614164763123, guid: c61e14fbf1592a94fab626560ff936d1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d57d3edfdf389c4da14f920e318f60e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61e14fbf1592a94fab626560ff936d1, type: 3}
