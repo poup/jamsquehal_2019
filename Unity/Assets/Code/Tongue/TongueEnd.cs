@@ -53,9 +53,15 @@ public class TongueEnd : MonoBehaviour
     
     public class SpeedUp : ITongueEndModifier
     {
-        public const float speedUp = 2.0f;
-        public const float dragModifier = 2.0f;
-        
+        private readonly float speedUp ;
+        private readonly float dragModifier;
+
+        public SpeedUp(float speedUp, float dragModifier)
+        {
+            this.speedUp = speedUp;
+            this.dragModifier = dragModifier;
+        }
+
         public bool terminated { get; set; }
         public float startTime { get; set; }
         

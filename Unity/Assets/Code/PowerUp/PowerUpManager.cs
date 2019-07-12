@@ -10,7 +10,12 @@ namespace Code
         
         public float duration = 4.0f;
         
+        [Header("MultiPomme")]
         public int MultiPommeCount = 20;
+        
+        [Header("SpeedUp")]
+        public float speedUp = 2.0f;
+        public float dragMultiplier = 2.0f;
         
         public static PowerUpManager instance;
 
@@ -96,7 +101,7 @@ namespace Code
         
         private void DoSpeedup(int playerId)
         {
-            var speedup = new TongueEnd.SpeedUp();
+            var speedup = new TongueEnd.SpeedUp(speedUp, dragMultiplier);
             RegisterPowerUp(speedup);
             
             foreach (var player in GetPlayersMover())
