@@ -11,12 +11,12 @@ namespace Code
         [SerializeField] private Transform accr2;
         [SerializeField] private Transform accr3;
         [SerializeField] private Transform accr4;
-        
+
         [SerializeField] private Player player1Prefab;
         [SerializeField] private Player player2Prefab;
         [SerializeField] private Player player3Prefab;
         [SerializeField] private Player player4Prefab;
-        
+
         [SerializeField] public AppleSpawner appleSpawner;
 
         [HideInInspector] public Player player1;
@@ -25,20 +25,42 @@ namespace Code
         [HideInInspector] public Player player4;
 
         public int StartPommeCount = 20;
-        
+
         private void Start()
         {
-            player1 = Instantiate(player1Prefab, accr1.position, accr1.rotation, transform);
-            player1.board = this;
-            
-            player2 = Instantiate(player2Prefab, accr2.position, accr2.rotation, transform);
-            player2.board = this;
-            
-            player3 = Instantiate(player3Prefab, accr3.position, accr3.rotation, transform);
-            player3.board = this;
-            
-            player4 = Instantiate(player4Prefab, accr4.position, accr4.rotation, transform);
-            player4.board = this;
+            player1 = CreatePlayer(player1Prefab, accr1);
+            player2 = CreatePlayer(player2Prefab, accr2);
+            player3 = CreatePlayer(player3Prefab, accr3);
+            player4 = CreatePlayer(player4Prefab, accr4);
+        }
+
+        private Player CreatePlayer(Player prefab, Transform target)
+        {
+            var player = Instantiate(prefab, target.position, target.rotation, transform);
+            player.board = this;
+            return player;
+        }
+
+        public void Clear()
+        {
+            appleSpawner.Clear();
+
+            if (player1 != null)
+                Destroy(player1.gameObject);
+            if (player2 != null)
+                Destroy(player2.gameObject);
+            if (player3 != null)
+                Destroy(player3.gameObject);
+            if (player4 != null)
+                Destroy(player4.gameObject);
+        }
+
+        public void Restart()
+        {
+            Clear();
+            Start();
+
+            appleSpawner.StartSpawn(StartPommeCount);
         }
     }
 }
