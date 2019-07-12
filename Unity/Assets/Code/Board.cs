@@ -28,10 +28,6 @@ namespace Code
 
         private void Start()
         {
-            player1 = CreatePlayer(player1Prefab, accr1);
-            player2 = CreatePlayer(player2Prefab, accr2);
-            player3 = CreatePlayer(player3Prefab, accr3);
-            player4 = CreatePlayer(player4Prefab, accr4);
         }
 
         private Player CreatePlayer(Player prefab, Transform target)
@@ -58,7 +54,11 @@ namespace Code
         public void Restart()
         {
             Clear();
-            Start();
+            
+            player1 = CreatePlayer(player1Prefab, accr1);
+            player2 = CreatePlayer(player2Prefab, accr2);
+            player3 = CreatePlayer(player3Prefab, accr3);
+            player4 = CreatePlayer(player4Prefab, accr4);
 
             appleSpawner.StartSpawn(StartPommeCount);
         }
