@@ -10,7 +10,6 @@ public class Apple : MonoBehaviour
 
     public PowerUpType powerUpType;
     
-    
     void Update()
     {
         // debug
@@ -20,8 +19,6 @@ public class Apple : MonoBehaviour
         }
     }
     
-    
-
     private void LateUpdate()
     {
         var rotation = transform.rotation;

@@ -169,6 +169,7 @@ namespace Code
         private void RegisterPowerUp(IPowerUp power)
         {
             power.startTime = Time.time;
+            m_powerUps.Add(power);
         }
 
         private void FixedUpdate()
