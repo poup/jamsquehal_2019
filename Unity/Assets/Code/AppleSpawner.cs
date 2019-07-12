@@ -7,7 +7,7 @@ public class AppleSpawner : MonoBehaviour
    public float radius = 3.0f;
    public float defaultInterval = 0.02f;
 
-   public float probaPowerUp = 5.0f / 20.0f;
+   public float probaPowerUp = 1.0f / 20.0f;
    public float scale = 5.0f;
 
    public Apple m_appleNormalPrefab;
@@ -34,10 +34,10 @@ public class AppleSpawner : MonoBehaviour
    private IEnumerator Spawn(int count, float interval)
    {
       var s = new Vector3(scale, scale, scale);
-      Vector3 pos = Random.insideUnitSphere * radius;
 
       for (int i = 0; i < count; ++i)
-      {
+     {
+         Vector3 pos = Random.insideUnitSphere * radius;
          var prefab = GetRandomPrefab();
          var apple = Instantiate(prefab, pos, Random.rotationUniform, transform);
          apple.transform.localScale = s;
@@ -53,12 +53,12 @@ public class AppleSpawner : MonoBehaviour
     private IEnumerator RegularSpawn(int count, float interval, float totalTime)
     {
         var s = new Vector3(scale, scale, scale);
-        Vector3 pos = Random.insideUnitSphere * radius;
         var timeLeft = totalTime;
         while (totalTime > 0)
         {
             for (int i = 0; i < count; ++i)
             {
+                Vector3 pos = Random.insideUnitSphere * radius;
                 var prefab = GetRandomPrefab();
                 var apple = Instantiate(prefab, pos, Random.rotationUniform, transform);
                 apple.transform.localScale = s;
