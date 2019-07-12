@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 namespace Code
 {
@@ -11,7 +11,8 @@ namespace Code
         public float duration = 4.0f;
         
         [Header("MultiPomme")]
-        public int MultiPommeCount = 20;
+        public int MultiPommeCountMin = 18;
+        public int MultiPommeCountMax = 25;
         public float MultiPommeInterval = 0.08f;
         
         [Header("SpeedUp")]
@@ -97,7 +98,8 @@ namespace Code
 
         private void DoMultiPomme(int playerId)
         {
-            m_board.appleSpawner.StartSpawn(MultiPommeCount, MultiPommeInterval);
+            var count = UnityEngine.Random.Range(MultiPommeCountMin, MultiPommeCountMax);
+            m_board.appleSpawner.StartSpawn(count, MultiPommeInterval);
         }
         
         private void DoSpeedup(int playerId)
