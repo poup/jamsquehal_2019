@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572035a4082d4fc28dc7c26a75becbff, type: 3}
   m_Name: Tongue Params
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  outSpeed: 12.03
-  inSpeed: 7.85
+  moveSpeed: 12
+  outSpeed: 12
+  inSpeed: 8
   sectionCount: 40
   minCount: 1
   repulseForce: 0
