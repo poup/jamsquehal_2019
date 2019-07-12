@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 5374783614503288819}
   - component: {fileID: 5374783614503288816}
   - component: {fileID: 1970731599}
+  - component: {fileID: -5371599581569124685}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Apple
@@ -158,3 +159,26 @@ MonoBehaviour:
   rb: {fileID: 5374783614503288819}
   sr: {fileID: 5374783614164763123}
   powerUpType: 0
+--- !u!114 &-5371599581569124685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5374783614503288822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Apple
+  Event: event:/Gameplay_SFX/SFX_Bonus
+  PlayEvent: 3
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

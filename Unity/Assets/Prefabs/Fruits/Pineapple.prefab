@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5371599581569124685, guid: c61e14fbf1592a94fab626560ff936d1,
+        type: 3}
+      propertyPath: Event
+      value: event:/Gameplay_SFX/SFX_Malus
+      objectReference: {fileID: 0}
     - target: {fileID: 5374783614503288822, guid: c61e14fbf1592a94fab626560ff936d1,
         type: 3}
       propertyPath: m_Name

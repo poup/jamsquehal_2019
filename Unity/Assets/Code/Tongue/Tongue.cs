@@ -63,7 +63,6 @@ public class Tongue : MonoBehaviour
             previousRB = section.rigidBody;
         }
         
-        m_tongueStart.position = m_minPoint.position;
         m_tongueEnd.SetPlayerId(m_playerId);
         m_tongueEnd.ConnectedTo(previousRB);
     }
