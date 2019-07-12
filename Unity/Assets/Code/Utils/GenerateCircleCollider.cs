@@ -2,7 +2,7 @@
 
 public class GenerateCircleCollider : MonoBehaviour
 {
-    public int radius = 4;
+    public float radius = 4f;
     public int count = 36;
     public Vector3 colliderCenter = Vector3.zero;
     public Vector3 colliderSize = Vector3.one;
