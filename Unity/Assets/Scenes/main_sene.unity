@@ -556,51 +556,6 @@ PrefabInstance:
       propertyPath: board
       value: 
       objectReference: {fileID: 1581011535}
-    - target: {fileID: 5561003437223137003, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5561003437223137003, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5561003437223137003, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5561003437223137003, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198159071988183971, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198159071988183971, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198159071988183971, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198159071988183971, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198159071988183971, guid: 1d2f7075361a03445b0be7d84a39e758,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d2f7075361a03445b0be7d84a39e758, type: 3}
 --- !u!1001 &7061015547130642263
@@ -618,17 +573,17 @@ PrefabInstance:
     - target: {fileID: 7061015547452147381, guid: b615293e2359c9a44be97e2fa1c67aaa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.415497
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7061015547452147381, guid: b615293e2359c9a44be97e2fa1c67aaa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0286336
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7061015547452147381, guid: b615293e2359c9a44be97e2fa1c67aaa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.015625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7061015547452147381, guid: b615293e2359c9a44be97e2fa1c67aaa,
         type: 3}
