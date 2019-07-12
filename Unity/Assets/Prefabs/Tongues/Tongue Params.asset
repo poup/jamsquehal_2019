@@ -15,7 +15,7 @@ MonoBehaviour:
   moveSpeed: 10
   outSpeed: 12.03
   inSpeed: 7.85
-  sectionCount: 60
+  sectionCount: 40
   minCount: 1
   repulseForce: 0
   conectedAnchor: {x: 0, y: 0.2, z: 0}
