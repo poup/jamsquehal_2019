@@ -1,25 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Code;
 using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
     public Rigidbody rb;
     public SpriteRenderer sr;
-    // Start is called before the first frame update
-    void Start()
-    {
-        print("lololol");
-    }
 
-    // Update is called once per frame
+    public PowerUpType powerUpType;
+    
+    
     void Update()
     {
+        // debug
         if(Inputs.GetFire1(1))
         {
             rb.AddForce(new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), 0));
         }
     }
+    
+    
 
     private void LateUpdate()
     {

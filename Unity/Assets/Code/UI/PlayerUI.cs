@@ -8,6 +8,11 @@ public class PlayerUI : MonoBehaviour
     public int scoreValue;
 
 
+    public void AddScore(int score)
+    {
+        SetScore(scoreValue + score);
+    } 
+    
     public void SetScore(int score)
     {
         scoreValue = score;

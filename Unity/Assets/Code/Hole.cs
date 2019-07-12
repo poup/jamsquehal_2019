@@ -1,25 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Code;
 using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public int playerId;
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Apple"))
         {
+            var apple = other.gameObject.GetComponent<Apple>();
+            if (apple != null)
+            {
+                var powerUpType = apple.powerUpType;
+                var score = PowerUpUtils.GetScoreFor(powerUpType);
+                UI.instance.gamePage.AddScore(playerId, score);
+            }
+
             Destroy(other.gameObject);
         }
     }

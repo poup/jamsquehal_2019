@@ -39,12 +39,13 @@ namespace Code.UI
             EndOfTimer?.Invoke();
         }
 
-        public void SetScore(int playerId, int score)
+        public void AddScore(int playerId, int score)
         {
             var ui = GetPlayer(playerId);
             if(ui != null)
-                ui.SetScore(score);
+                ui.AddScore(score);
         }
+        
 
         private PlayerUI GetPlayer(int playerId)
         {

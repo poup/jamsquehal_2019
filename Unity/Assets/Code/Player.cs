@@ -36,11 +36,5 @@ namespace Code
             print(sr.color.ToString());
             board.colors[randomPlacement] = Color.white;
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }
