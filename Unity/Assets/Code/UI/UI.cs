@@ -84,9 +84,18 @@ public class UI : MonoBehaviour
     private void StartGame()
     {
         gamePage.gameObject.SetActive(true);
-        gamePage.StartTimer(durationSeconds);
         
-        board.Restart();
+        board.Clear();
+        
+        StartCoroutine(StartGameCoroutine());
+    }
+
+    private IEnumerator StartGameCoroutine()
+    {
+        yield return new WaitForSecondsRealtime(board.timeBeforePomme); 
+        board.appleSpawner.StartSpawn(board.StartPommeCount);
+        yield return new WaitForSecondsRealtime(0.5f);
+        gamePage.StartTimer(durationSeconds);
     }
 
     private void OnEndOfTimer()

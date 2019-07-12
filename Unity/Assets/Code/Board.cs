@@ -25,10 +25,7 @@ namespace Code
         [HideInInspector] public Player player4;
 
         public int StartPommeCount = 20;
-
-        private void Start()
-        {
-        }
+        public float timeBeforePomme = 1.0f;
 
         private Player CreatePlayer(Player prefab, Transform target)
         {
@@ -49,18 +46,12 @@ namespace Code
                 Destroy(player3.gameObject);
             if (player4 != null)
                 Destroy(player4.gameObject);
-        }
-
-        public void Restart()
-        {
-            Clear();
             
             player1 = CreatePlayer(player1Prefab, accr1);
             player2 = CreatePlayer(player2Prefab, accr2);
             player3 = CreatePlayer(player3Prefab, accr3);
             player4 = CreatePlayer(player4Prefab, accr4);
 
-            appleSpawner.StartSpawn(StartPommeCount);
         }
     }
 }
