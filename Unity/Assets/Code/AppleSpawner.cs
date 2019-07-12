@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,7 +7,7 @@ public class AppleSpawner : MonoBehaviour
    public float radius = 3.0f;
    public float defaultInterval = 0.02f;
 
-   public float probaPowerUp = 1.0f / 20.0f;
+   public float probaPowerUp = 5.0f / 20.0f;
    public float scale = 5.0f;
 
    public Apple m_appleNormalPrefab;
