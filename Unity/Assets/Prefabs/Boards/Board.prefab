@@ -445,6 +445,7 @@ MonoBehaviour:
   player3: {fileID: 0}
   player4: {fileID: 0}
   StartPommeCount: 20
+  timeBeforePomme: 1
 --- !u!65 &712232729693751727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -456,8 +457,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13, y: 13, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 13, y: 13, z: 10}
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!65 &8947960149029872667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,8 +470,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 0}
-  m_Center: {x: 0, y: 0, z: 5}
+  m_Size: {x: 100, y: 100, z: 10}
+  m_Center: {x: 0, y: 0, z: 10}
 --- !u!1 &1950963891622601329
 GameObject:
   m_ObjectHideFlags: 0

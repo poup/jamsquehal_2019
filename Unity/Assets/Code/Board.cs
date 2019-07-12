@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -52,6 +53,12 @@ namespace Code
             player3 = CreatePlayer(player3Prefab, accr3);
             player4 = CreatePlayer(player4Prefab, accr4);
 
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Destroy(other.gameObject);
+            Debug.LogError("Destroy " + other.gameObject.name);
         }
     }
 }
