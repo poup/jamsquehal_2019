@@ -50,6 +50,12 @@ public static class Sound
         menuScreenEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //gameplayMusic.start();
         barkIdle.start();
+    }  
+    
+    public static void GameStop()
+    {
+        barkIdle.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        gameplayMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public static void VictoireScreen(int perso)

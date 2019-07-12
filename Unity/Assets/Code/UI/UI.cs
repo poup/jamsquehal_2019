@@ -92,6 +92,8 @@ public class UI : MonoBehaviour
 
     private void OnEndOfTimer()
     {
+        Sound.GameStop();
+        
         var winner = gamePage.GetWinner();
         if (winner != null)
         {
