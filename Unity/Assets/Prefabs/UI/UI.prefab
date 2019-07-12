@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 3998359358734317799}
-  player2: {fileID: 5823366062143489680}
-  player3: {fileID: 3561836004009234309}
+  player2: {fileID: 3561836004009234309}
+  player3: {fileID: 5823366062143489680}
   player4: {fileID: 4156255483256539242}
   m_timer: {fileID: 5400425769957264149}
 --- !u!114 &788562402
