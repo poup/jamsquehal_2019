@@ -48,7 +48,7 @@ public static class Sound
     public static void GameStart()
     {
         menuScreenEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        gameplayMusic.start();
+        //gameplayMusic.start();
         barkIdle.start();
     }
 
