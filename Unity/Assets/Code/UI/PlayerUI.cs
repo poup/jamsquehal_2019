@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerUI : MonoBehaviour
 {
+    public int playerId;
     public TextMeshProUGUI m_score;
     public int scoreValue;
 

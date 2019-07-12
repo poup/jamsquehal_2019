@@ -11,7 +11,10 @@ public class UI : MonoBehaviour
     
     public StartPage startPage;
     public GamePage gamePage;
-    public VictoryPage victoryPage;
+    public VictoryPage victoryPage1;
+    public VictoryPage victoryPage2;
+    public VictoryPage victoryPage3;
+    public VictoryPage victoryPage4;
 
     public static UI instance;
 
@@ -21,7 +24,10 @@ public class UI : MonoBehaviour
         
 //        startPage.gameObject.SetActive(true);
 //        gamePage.gameObject.SetActive(false);
-//        victoryPage.gameObject.SetActive(false);
+//        victoryPage1.gameObject.SetActive(false);
+//        victoryPage2.gameObject.SetActive(false);
+//        victoryPage3.gameObject.SetActive(false);
+//        victoryPage4.gameObject.SetActive(false);
 //        
 //        startPage.playButton.onClick.AddListener(() =>
 //        {
@@ -39,7 +45,12 @@ public class UI : MonoBehaviour
 // TODO : remove ME
         startPage.gameObject.SetActive(false);
         gamePage.gameObject.SetActive(true);
-        victoryPage.gameObject.SetActive(false);
+        
+        victoryPage1.gameObject.SetActive(false);
+        victoryPage2.gameObject.SetActive(false);
+        victoryPage3.gameObject.SetActive(false);
+        victoryPage4.gameObject.SetActive(false);
+        
             gamePage.StartTimer(durationSeconds);
 
         gamePage.EndOfTimer = OnEndOfTimer;
@@ -50,13 +61,31 @@ public class UI : MonoBehaviour
         var winner = gamePage.GetWinner();
         if (winner != null)
         {
+            var victoryPage = GetVictoryPage(winner.playerId);
             victoryPage.SetWinner(winner.scoreValue, winner.m_score.color, null);
+            victoryPage.gameObject.SetActive(true);
+        }
+        else
+        {
+            startPage.gameObject.SetActive(true);
         }
         
-        victoryPage.gameObject.SetActive(true);
         gamePage.gameObject.SetActive(false);
         gamePage.Reset();
         
         // TODO décharger la scene du board
+    }
+
+    private VictoryPage GetVictoryPage(int playerId)
+    {
+        switch (playerId)
+        {
+            case 1: return victoryPage1;
+            case 2: return victoryPage2;
+            case 3: return victoryPage3;
+            case 4: return victoryPage4;
+        }
+
+        return null;
     }
 }
