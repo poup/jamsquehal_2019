@@ -46,7 +46,8 @@ MonoBehaviour:
   radius: 3
   defaultInterval: 0.02
   probaPowerUp: 0.05
-  scale: 5
+  scale: 7.5
+  altitude: 3
   m_appleNormalPrefab: {fileID: 1970731599, guid: c61e14fbf1592a94fab626560ff936d1,
     type: 3}
   m_powerUpsPrefab:
