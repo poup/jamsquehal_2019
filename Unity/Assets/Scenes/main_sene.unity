@@ -270,6 +270,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748949478582736954, guid: 2f5bdc90974604f4a9624bc067199052,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f5bdc90974604f4a9624bc067199052, type: 3}
 --- !u!114 &1581011535 stripped
@@ -308,7 +313,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664118632}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -546,6 +551,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2395813647177439790, guid: 1d2f7075361a03445b0be7d84a39e758,
+        type: 3}
+      propertyPath: board
+      value: 
+      objectReference: {fileID: 1581011535}
     - target: {fileID: 5561003437223137003, guid: 1d2f7075361a03445b0be7d84a39e758,
         type: 3}
       propertyPath: m_textInfo.characterCount
